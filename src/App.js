@@ -1,4 +1,5 @@
 import './App.css';
+import ItemListContainer from './components/Cards/ItemListContainer';
 import Header from './components/Header/Header';
 import Navbar from './components/NavBar/NavBar';
 
@@ -11,6 +12,7 @@ function App() {
         <Header />
         <Navbar />  
       </header>
+      <ItemListContainer></ItemListContainer>
     </div>
   );
 }

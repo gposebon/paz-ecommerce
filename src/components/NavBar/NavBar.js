@@ -7,6 +7,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Container, Link, Typography } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
+
+
+const CartWidget = () => {
+    return (
+        <AddShoppingCartIcon sx={{ color: "black" }} />
+    )
+ }
+
 function NavBar() {
     return (
         <Container>
@@ -71,7 +79,7 @@ function NavBar() {
                                 Contacto
                             </Typography>
                         </Link>
-                        <AddShoppingCartIcon sx={{ color: "black" }} />
+                        <CartWidget></CartWidget>
                     </Toolbar>
                 </AppBar>
             </Box>
