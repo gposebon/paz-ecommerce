@@ -12,7 +12,7 @@ function App() {
         <Header />
         <Navbar />  
       </header>
-      <ItemListContainer verdura="Lechuga"></ItemListContainer>
+      <ItemListContainer></ItemListContainer>
     </div>
   );
 }

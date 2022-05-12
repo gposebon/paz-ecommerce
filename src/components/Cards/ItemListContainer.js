@@ -1,32 +1,61 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import { useEffect, useState } from 'react'
 import { Container } from '@mui/material';
+import ItemList from './ItemList';
 
 import Acelga from '../../image/acelga.jpg'
-import ItemCount from './ItemCount';
+import Lechuga from '../../image/lechuga.jpg'
+import Tomate from '../../image/tomate.jpg'
+
+const productos = [
+    {
+        "id": 1,
+        "nombre": "Acelga",
+        "precio": 120,
+        "imagen":Acelga,
+        "Alt": "Acelga",
+        "stock": 15
+    },
+    {
+        "id": 2,
+        "nombre": "Lechuga",
+        "precio": 70,
+        "imagen": Lechuga,
+        "Alt": "Lechuga",
+        "stock": 20
+    },
+    {
+        "id": 3,
+        "nombre": "Tomate",
+        "precio": 180,
+        "imagen": Tomate,
+        "Alt": "Tomate",
+        "stock": 10
+    },
+]
 
 
-const ItemListContainer = ({verdura}) => {
+const ItemListContainer = () => {
+
+    const [verduras, setVerduras] = useState([])
+
+    useEffect( () => { 
+        const traeProductos = new Promise( (resolve, reject) => {
+            setTimeout( () => {
+                resolve(productos)
+        }, 2000 )
+    })
+    
+
+    traeProductos.then( (res => {
+        setVerduras(res)
+    }))
+    
+},[])
+
     return (
-        <Container>
-            <Card sx={{ maxWidth: 250 }}>
-                <CardMedia
-                    component="img"
-                    height="140"
-                    image={Acelga}
-                    alt="Acelga"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {verdura}
-                    </Typography>
-                </CardContent>
-                <ItemCount inicial="1" stock="10"></ItemCount>
-            </Card>
-            
+        <Container sx={{ p: 5 }}>
+            <ItemList verduras={verduras}></ItemList>
         </Container>
     )
 }
