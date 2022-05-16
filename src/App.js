@@ -96,7 +96,7 @@ traeProductos.then( (res => {
 },[])
 
   /*
-    ItemDetailContainer 
+    ItemDetailContainer - ItemDetail
     En App js pasar id del producto que queremos el detalle
     1 - Acelga
     2 - lechuga
@@ -112,6 +112,7 @@ traeProductos.then( (res => {
     <div className="App">
       <Header /> 
       <Navbar />  
+      {/*<ItemListContainer verduras={verduras}></ItemListContainer>*/}
       <ItemDetailContainer verduras={verduras} id="1"></ItemDetailContainer>
     </div>
   );
