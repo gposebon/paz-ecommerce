@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FormGroup, Button, Input, Typography} from '@mui/material';
+import { FormGroup, ButtonGroup, Button, Input} from '@mui/material';
 
 const ItemCount = ({ inicial, stock}) => {
 
@@ -21,13 +21,14 @@ const ItemCount = ({ inicial, stock}) => {
     }
 
     return (
-        
         <FormGroup>
-            {parseInt(stock) > cantidad ? <Button onClick={addItem}> + </Button> : <Button disable> + </Button>}
-            <Input value={cantidad} onChange={handleChange}>{cantidad}</Input>
-            {cantidad > 0 ? <Button onClick={delItem} > - </Button> : <Button disable> - </Button>}
-            <Button variant="outlined">Agregar al carrito</Button>            
-            </FormGroup>
+            <ButtonGroup size="small" aria-label="small button group">
+                {cantidad > 0 ? <Button onClick={delItem} > - </Button> : <Button disable="true"> - </Button>} 
+                <Input inputProps={{ style: {textAlign: 'center'} }} value={cantidad} onChange={handleChange} >{cantidad}</Input>
+                {parseInt(stock) > cantidad ? <Button onClick={addItem}> + </Button> : <Button disable="true"> + </Button>}          
+            </ButtonGroup>
+            <Button variant="outlined">Agregar al carrito</Button>
+        </FormGroup>
     )
 
 }
