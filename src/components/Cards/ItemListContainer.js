@@ -1,11 +1,8 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react'
 
-
-
-import ItemList from './ItemList';
 import ItemDetailContainer from './ItemDetailContainer'
-
+import ItemList from './ItemList'
 // Imagenes
 import Acelga from '../../image/acelga.jpg'
 import Lechuga from '../../image/lechuga.jpg'
@@ -94,11 +91,12 @@ const ItemListContainer = () => {
         }))
 
     }, [])
-
+    
+    
     return (
         <> 
-            <ItemDetailContainer verduras={verduras} id="1" /> 
-            
+            <ItemDetailContainer verduras={verduras} id="1" />
+            <ItemList verduras={verduras} />
         </>
     )
 }

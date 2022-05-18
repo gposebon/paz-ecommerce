@@ -6,15 +6,12 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 
-
-
-
 const Items = ({ verduras }) => {
     return (
         <>
                 {verduras.map((verdura) => (
-                <Grid item  xs={2} sm={4} md={4} key={verdura.id} >
-                    <Card sx={{ maxWidth: 250}} >
+                <Grid item  xs={2} sm={4} md={4} >
+                    <Card sx={{ maxWidth: 250}} key={verdura.id}>
                         <CardMedia
                             component="img"
                             height="200"

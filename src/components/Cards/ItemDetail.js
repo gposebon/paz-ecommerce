@@ -15,7 +15,7 @@ const ItemDetail = ({ verduras, id }) => {
         <>
             <Grid item xs={4}>
                 {filtro.map((verdura) => (
-                    <Card sx={{ maxWidth: 350 }}>
+                    <Card sx={{ maxWidth: 350 }} key={verdura.id}>
                         <CardMedia
                             component="img"
                             height="350"
