@@ -1,6 +1,10 @@
+import ItemListContainer from '../components/Cards/ItemListContainer'
+
 const Inicio = () => {
     return (
-        <h1>Inicio</h1>
+        <>
+            <ItemListContainer />
+        </>
     )
 }
 

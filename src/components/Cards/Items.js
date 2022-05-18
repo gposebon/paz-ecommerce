@@ -1,8 +1,9 @@
-import { Button, CardActions, Grid } from '@mui/material';
+import {CardActions, Grid } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 
 
@@ -11,7 +12,6 @@ import ItemCount from './ItemCount';
 const Items = ({ verduras }) => {
     return (
         <>
-            
                 {verduras.map((verdura) => (
                 <Grid item  xs={2} sm={4} md={4} key={verdura.id} >
                     <Card sx={{ maxWidth: 250}} >
@@ -31,8 +31,7 @@ const Items = ({ verduras }) => {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Detalles</Button>
+                            <Link to="/item/{verdura.id}">Detalles</Link>
                         </CardActions>
                         <ItemCount inicial="1" stock="10"></ItemCount>
                     </Card>

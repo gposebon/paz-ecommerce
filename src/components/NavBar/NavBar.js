@@ -3,9 +3,17 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import { Container, Link, Typography } from '@mui/material';
+import { Container, Typography} from '@mui/material';
+
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
+import { Link } from 'react-router-dom'
+
+const linkStyle = {
+    margin: "1rem",
+    textDecoration: "none",
+    color: 'blue'
+};
 
 
 const CartWidget = () => {
@@ -31,10 +39,8 @@ function NavBar() {
                             <Typography variant="h4"> PAZ</Typography>
                         </IconButton>
                         <Link 
-                            href="#" 
-                            color="black" 
-                            sx={{ flexGrow: 1 }}
-                            underline="none"
+                            to="/" 
+                            style={linkStyle}
                             >
                             <Typography
                                 variant="h6"
@@ -43,10 +49,8 @@ function NavBar() {
                             </Typography>
                         </Link>
                         <Link 
-                            href="#" 
-                            color="black" 
-                            sx={{ flexGrow: 1 }}
-                            underline="none"
+                            to="/categoria/:id" 
+                            style={linkStyle}
                             >
                             <Typography
                                 variant="h6"
@@ -55,22 +59,18 @@ function NavBar() {
                             </Typography>
                         </Link>
                         <Link 
-                            href="#" 
-                            color="black" 
-                            sx={{ flexGrow: 1 }}
-                            underline="none"
+                            to="/about" 
+                            style={linkStyle}
                             >
                             <Typography
                                 variant="h6"
                                 >
-                                Sobre Nosotros
+                                About
                             </Typography>
                         </Link>
                         <Link 
-                            href="#" 
-                            color="black" 
-                            sx={{ flexGrow: 1 }}
-                            underline="none"
+                            to="/contacto" 
+                            style={linkStyle}
                             >
                             <Typography
                                 variant="h6"
