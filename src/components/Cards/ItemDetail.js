@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Button, CardActions, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -31,10 +31,6 @@ const ItemDetail = ({ verduras, id }) => {
                                 Precio: {verdura.precio}
                             </Typography>
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Share</Button>
-                            <Button size="small">Detalles</Button>
-                        </CardActions>
                         <ItemCount inicial="1" stock="10"></ItemCount>
                     </Card>
                 ))}

@@ -30,6 +30,8 @@ function NavBar() {
                     position="static"
                     sx={{ bgcolor: "white" }}>
                     <Toolbar>
+                        <Link to="/"
+                            style={linkStyle}>
                         <IconButton
                             size="large"
                             edge="start"
@@ -38,6 +40,7 @@ function NavBar() {
                         >
                             <Typography variant="h4"> PAZ</Typography>
                         </IconButton>
+                        </Link>
                         <Link 
                             to="/" 
                             style={linkStyle}
@@ -78,7 +81,10 @@ function NavBar() {
                                 Contacto
                             </Typography>
                         </Link>
-                        <CartWidget></CartWidget>
+                        <Link to="/carrito" 
+                            style={linkStyle}>
+                            <CartWidget></CartWidget>
+                        </Link>
                     </Toolbar>
                 </AppBar>
             </Box>

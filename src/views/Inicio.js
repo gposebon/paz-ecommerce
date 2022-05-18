@@ -1,9 +1,9 @@
-import ItemList from '../components/Cards/ItemList'
+import ItemListContainer from '../components/Cards/ItemListContainer'
 
 const Inicio = () => {
     return (
         <>
-            <ItemList />
+            <ItemListContainer />
         </>
     )
 }

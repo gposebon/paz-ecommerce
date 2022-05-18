@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react'
 
-import ItemDetailContainer from './ItemDetailContainer'
 import ItemList from './ItemList'
 // Imagenes
 import Acelga from '../../image/acelga.jpg'
@@ -95,7 +94,6 @@ const ItemListContainer = () => {
     
     return (
         <> 
-            <ItemDetailContainer verduras={verduras} id="1" />
             <ItemList verduras={verduras} />
         </>
     )

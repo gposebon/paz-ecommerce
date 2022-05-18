@@ -11,6 +11,7 @@ import Mercado from './views/Mercado'
 import DetalleProducto from './views/DetalleProducto'
 import About from './views/About'
 import Contacto from './views/Contacto'
+import Carrito from './views/Carrito'
 
 
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/item/:id" element={<DetalleProducto />} />
             <Route path="/about" element={<About />} />
             <Route path="/contacto" element={<Contacto />} />
+            <Route path="/carrito" element={<Carrito />} />
           </Routes>
       </div>
     </BrowserRouter>
