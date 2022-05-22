@@ -41,46 +41,54 @@ function NavBar() {
                             <Typography variant="h4"> PAZ</Typography>
                         </IconButton>
                         </Link>
-                        <Link 
-                            to="/" 
-                            style={linkStyle}
-                            >
+                        
                             <Typography
                                 variant="h6"
+                                component="div"
+                                sx={{ flexGrow: 1 }}
                                 >
-                                Inicio
+                                <Link to="/"
+                                    style={linkStyle}
+                                    >
+                                    Inicio
+                                </Link>
                             </Typography>
-                        </Link>
-                        <Link 
-                            to="/categoria/:id" 
-                            style={linkStyle}
-                            >
                             <Typography
                                 variant="h6"
+                                component="div"
+                                sx={{ flexGrow: 1 }}
                                 >
+                                <Link 
+                                    to="/categoria/:id" 
+                                    style={linkStyle}
+                                    >
                                 Mercado
+                                </Link>
                             </Typography>
-                        </Link>
-                        <Link 
-                            to="/about" 
-                            style={linkStyle}
-                            >
                             <Typography
                                 variant="h6"
+                                component="div"
+                                sx={{ flexGrow: 1 }}
                                 >
-                                About
+                                <Link 
+                                    to="/about" 
+                                    style={linkStyle}
+                                    >
+                                Sobre Nosotros
+                                </Link>
                             </Typography>
-                        </Link>
-                        <Link 
-                            to="/contacto" 
-                            style={linkStyle}
-                            >
                             <Typography
                                 variant="h6"
+                                component="div"
+                                sx={{ flexGrow: 1 }}
                                 >
+                                <Link 
+                                    to="/contacto" 
+                                    style={linkStyle}
+                                    >
                                 Contacto
+                                </Link>
                             </Typography>
-                        </Link>
                         <Link to="/carrito" 
                             style={linkStyle}>
                             <CartWidget></CartWidget>

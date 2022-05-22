@@ -6,6 +6,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ItemCount from './ItemCount';
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ verduras, id }) => {
 
@@ -15,10 +17,10 @@ const ItemDetail = ({ verduras, id }) => {
         <>
             <Grid item xs={4}>
                 {filtro.map((verdura) => (
-                    <Card sx={{ maxWidth: 350 }} key={verdura.id}>
+                    <Card sx={{ maxWidth: 300 }} key={verdura.id}>
                         <CardMedia
                             component="img"
-                            height="350"
+                            height="300"
                             image={verdura.imagen}
                             alt={verdura.alt}
                             sx={{ pb: 2 }}
@@ -44,6 +46,9 @@ const ItemDetail = ({ verduras, id }) => {
                         <Typography variant="body2" color="text.secondary">
                             {verdura.descripcion}
                         </Typography>
+                        <Link to="/carrito">
+                            <Button variant="outlined">Ir al carrito</Button>
+                        </Link>
                     </CardContent>
                 ))}
             </Grid>
