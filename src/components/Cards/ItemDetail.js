@@ -17,10 +17,10 @@ const ItemDetail = ({ verduras, id }) => {
         <>
             <Grid item xs={4}>
                 {filtro.map((verdura) => (
-                    <Card sx={{ maxWidth: 300 }} key={verdura.id}>
+                    <Card sx={{ maxWidth: 250 }} key={verdura.id}>
                         <CardMedia
                             component="img"
-                            height="300"
+                            height="250"
                             image={verdura.imagen}
                             alt={verdura.alt}
                             sx={{ pb: 2 }}
@@ -33,7 +33,7 @@ const ItemDetail = ({ verduras, id }) => {
                                 Precio: {verdura.precio}
                             </Typography>
                         </CardContent>
-                        <ItemCount inicial="1" stock="10"></ItemCount>
+                        <ItemCount inicial="1" stock="10" verdura={verdura}></ItemCount>
                     </Card>
                 ))}
             </Grid>

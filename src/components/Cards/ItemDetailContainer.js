@@ -78,8 +78,6 @@ const ItemDetailContainer = () => {
 
     let verduraId = id.id
 
-    console.log(verduraId)
-
     const [verduras, setVerduras] = useState([])
 
     useEffect(() => {

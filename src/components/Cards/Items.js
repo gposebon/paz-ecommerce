@@ -5,7 +5,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
-import ItemCount from './ItemCount';
 
 const Items = ({ verduras }) => {
     return (
@@ -15,7 +14,7 @@ const Items = ({ verduras }) => {
                     <Card sx={{ maxWidth: 250}} key={verdura.id}>
                         <CardMedia
                             component="img"
-                            height="200"
+                            height="250"
                             image={verdura.imagen}
                             alt={verdura.alt}
                             sx={{pb:2}}
@@ -33,7 +32,6 @@ const Items = ({ verduras }) => {
                                 <Button>Detalles</Button>
                             </Link>
                         </CardActions>
-                        <ItemCount inicial="1" stock="10"></ItemCount>
                     </Card>
                 </Grid>
                 ))}
