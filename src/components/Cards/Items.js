@@ -6,10 +6,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
-const Items = ({ verduras }) => {
+const Items = ({ verdura }) => {
+
     return (
         <>
-                {verduras.map((verdura) => (
                 <Grid item  xs={2} sm={4} md={4} >
                     <Card sx={{ maxWidth: 250}} key={verdura.id}>
                         <CardMedia
@@ -34,7 +34,6 @@ const Items = ({ verduras }) => {
                         </CardActions>
                     </Card>
                 </Grid>
-                ))}
         </>
     )
 }

@@ -45,10 +45,11 @@ function NavBar() {
                             component="div"
                             sx={{ flexGrow: 1 }}
                         >
-                            <Link to="/"
+                            <Link
+                                to="/verduras"
                                 style={linkStyle}
                             >
-                                Inicio
+                                Verduras
                             </Link>
                         </Typography>
                         <Typography
@@ -57,10 +58,10 @@ function NavBar() {
                             sx={{ flexGrow: 1 }}
                         >
                             <Link
-                                to="/categoria/:id"
+                                to="/tambo"
                                 style={linkStyle}
                             >
-                                Mercado
+                                Tambo
                             </Link>
                         </Typography>
                         <Typography
@@ -69,22 +70,10 @@ function NavBar() {
                             sx={{ flexGrow: 1 }}
                         >
                             <Link
-                                to="/about"
+                                to="/envasados"
                                 style={linkStyle}
                             >
-                                Sobre Nosotros
-                            </Link>
-                        </Typography>
-                        <Typography
-                            variant="h6"
-                            component="div"
-                            sx={{ flexGrow: 1 }}
-                        >
-                            <Link
-                                to="/contacto"
-                                style={linkStyle}
-                            >
-                                Contacto
+                                Envasados
                             </Link>
                         </Typography>
                         <Link to="/carrito"

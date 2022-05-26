@@ -4,6 +4,7 @@ import { FormGroup, ButtonGroup, Button, Input} from '@mui/material';
 
 
 
+
 const ItemCount = ({ inicial, stock, verdura}) => {
 
     const [cantidad, setCantidad] = useState(parseInt(inicial))
